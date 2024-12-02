@@ -13,3 +13,11 @@ html {
 /* .container {
   padding: 32px 0;
 } */
+
+.main-title {
+  color: #313037;
+  font-size: 56px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 80px;
+}
