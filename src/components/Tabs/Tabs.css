@@ -1,0 +1,10 @@
+.tabs {
+  margin-bottom: 64px;
+  border-bottom: 0.5px solid rgba(49, 48, 55, 0.1);
+}
+
+.tabs-list {
+  display: flex;
+  justify-content: space-between;
+  width: 305px;
+}

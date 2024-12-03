@@ -1,0 +1,25 @@
+.tabs-list__item {
+  text-align: center;
+  padding: 0 40px 24px;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs__link {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #313037;
+}
+
+.tabs-link:focus {
+  color: #6c1bdb;
+}
+
+.tabs-list__item:active {
+  border-bottom-color: #313037;
+  color: #313037;
+}
+
+[aria-disabled="true"] {
+  color: rgba(49, 48, 55, 0.3);
+}
