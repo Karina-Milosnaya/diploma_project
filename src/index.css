@@ -8,12 +8,14 @@
 
 html {
   font-family: "Inter", sans-serif;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
-/* .container {
-  padding: 32px 0;
-} */
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 15px;
+}
 
 .main-title {
   color: #313037;

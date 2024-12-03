@@ -6,6 +6,7 @@ import Tab from "./components/Tab/Tab";
 import Tabs from "./components/Tabs/Tabs";
 import Button from "./components/Button/Button";
 import Dropdown from "./components/Dropdown/Dropdown";
+import SelectedPost from "./components/SelectedPost/SelectedPost";
 
 function App() {
   function handleClick1() {
@@ -17,8 +18,8 @@ function App() {
 
   return (
     <>
-      <Header fullname="Artem Malkin"></Header>
-      {/* <Title></Title> */}
+      {/* <Header fullname="Artem Malkin"></Header> */}
+      {/* <Title titleContent="Blog"></Title> */}
       {/* <Tab tabContent="Articles"></Tab> */}
       {/* <Tabs></Tabs> */}
       {/* <Button
@@ -34,6 +35,7 @@ function App() {
         functionClick={handleClick2}
       ></Button> */}
       {/* <Dropdown fullname="Artem Malkin"></Dropdown> */}
+      <SelectedPost></SelectedPost>
     </>
   );
 }

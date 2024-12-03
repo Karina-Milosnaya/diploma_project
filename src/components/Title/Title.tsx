@@ -1,9 +1,9 @@
 import "./Title.css";
 
-function Title() {
+function Title({ titleContent }: { titleContent: string }) {
   return (
     <>
-      <h1 className="main-title">Blog</h1>
+      <h1 className="main-title">{titleContent}</h1>
     </>
   );
 }
