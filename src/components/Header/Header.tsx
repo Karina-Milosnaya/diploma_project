@@ -17,9 +17,21 @@ function Header({ fullname }: TUserName) {
     <>
       <header className="header">
         <div className="header-wrap">
-          <div className="header__left">
+          <div className="header__logo">
             <img src={Logo} alt="logo" />
           </div>
+
+          <div className="header__left_search">
+            <input
+              placeholder="Search..."
+              type="text"
+              className="header__left_search-input"
+            ></input>
+            <div className="header__left_search-icon">
+              <i className="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+
           <div className="header__right">
             <div className="header__right_item-left">
               <i className="fa-solid fa-magnifying-glass"></i>

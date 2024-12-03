@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      {/* <Header fullname="Artem Malkin"></Header> */}
+      <Header fullname="Artem Malkin"></Header>
       {/* <Title></Title> */}
       {/* <Tab tabContent="Articles"></Tab> */}
       {/* <Tabs></Tabs> */}
@@ -33,7 +33,7 @@ function App() {
         isDisabled={false}
         functionClick={handleClick2}
       ></Button> */}
-      <Dropdown fullname="Artem Malkin"></Dropdown>
+      {/* <Dropdown fullname="Artem Malkin"></Dropdown> */}
     </>
   );
 }
