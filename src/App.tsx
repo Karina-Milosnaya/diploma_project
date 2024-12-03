@@ -5,6 +5,7 @@ import Title from "./components/Title/Title";
 import Tab from "./components/Tab/Tab";
 import Tabs from "./components/Tabs/Tabs";
 import Button from "./components/Button/Button";
+import Dropdown from "./components/Dropdown/Dropdown";
 
 function App() {
   function handleClick1() {
@@ -20,7 +21,7 @@ function App() {
       {/* <Title></Title> */}
       {/* <Tab tabContent="Articles"></Tab> */}
       {/* <Tabs></Tabs> */}
-      <Button
+      {/* <Button
         typeButton="primary"
         buttonText="Primary"
         isDisabled={false}
@@ -31,7 +32,8 @@ function App() {
         buttonText="Secondary"
         isDisabled={false}
         functionClick={handleClick2}
-      ></Button>
+      ></Button> */}
+      <Dropdown fullname="Artem Malkin"></Dropdown>
     </>
   );
 }

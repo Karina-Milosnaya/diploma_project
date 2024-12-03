@@ -1,11 +1,11 @@
 import "./Header.css";
 import Logo from "../../assets/Logo.png";
 
-type THeader = {
+type TUserName = {
   fullname: string;
 };
 
-function Header({ fullname }: THeader) {
+function Header({ fullname }: TUserName) {
   function getInitials(name: string): string {
     let array = name.split(" ");
     return array.reduce((result, item) => {
