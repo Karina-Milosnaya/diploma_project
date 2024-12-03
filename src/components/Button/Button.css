@@ -1,0 +1,40 @@
+.primary {
+  background-color: #6c1bdb;
+  padding: 16px 32px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  border: none;
+}
+
+.primary:hover {
+  background-color: #912ef2;
+}
+
+.primary:disabled {
+  background-color: rgba(49, 48, 55, 0.1);
+  color: rgba(49, 48, 55, 0.5);
+}
+
+.secondary {
+  background-color: rgba(49, 48, 55, 0.1);
+  padding: 16px 32px;
+  border-radius: 4px;
+  color: #313037;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  border: none;
+}
+
+.secondary:hover {
+  background-color: rgba(49, 48, 55, 0.3);
+  color: #313037;
+}
+
+.secondary:disabled {
+  background-color: rgba(49, 48, 55, 0.1);
+  color: rgba(49, 48, 55, 0.5);
+}
