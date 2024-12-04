@@ -8,6 +8,8 @@ import Button from "./components/Button/Button";
 import Dropdown from "./components/Dropdown/Dropdown";
 import SelectedPost from "./components/SelectedPost/SelectedPost";
 import Footer from "./components/Footer/Footer";
+import SelectedPage from "./pages/SelectedPage/SelectedPage";
+import Spinner from "./components/Spinner/Spinner";
 
 function App() {
   function handleClick1() {
@@ -37,7 +39,9 @@ function App() {
       ></Button> */}
       {/* <Dropdown fullname="Artem Malkin"></Dropdown> */}
       {/* <SelectedPost></SelectedPost> */}
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
+      <SelectedPage></SelectedPage>
+      {/* <Spinner></Spinner> */}
     </>
   );
 }
