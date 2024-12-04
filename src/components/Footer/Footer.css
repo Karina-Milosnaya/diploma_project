@@ -1,0 +1,36 @@
+.footer {
+  padding: 34px 0;
+  background-color: rgba(49, 48, 55, 0.05);
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__copyright span {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(49, 48, 55, 0.5);
+  line-height: 24px;
+}
+
+.footer__theme-switcher {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__theme-switcher_name {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(49, 48, 55, 0.5);
+  line-height: 24px;
+}
+
+.switcher-icon {
+  font-size: 23px;
+  font-weight: 400;
+  color: rgba(49, 48, 55, 0.5);
+  line-height: 24px;
+}

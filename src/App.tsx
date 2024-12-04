@@ -7,6 +7,7 @@ import Tabs from "./components/Tabs/Tabs";
 import Button from "./components/Button/Button";
 import Dropdown from "./components/Dropdown/Dropdown";
 import SelectedPost from "./components/SelectedPost/SelectedPost";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   function handleClick1() {
@@ -35,7 +36,8 @@ function App() {
         functionClick={handleClick2}
       ></Button> */}
       {/* <Dropdown fullname="Artem Malkin"></Dropdown> */}
-      <SelectedPost></SelectedPost>
+      {/* <SelectedPost></SelectedPost> */}
+      <Footer></Footer>
     </>
   );
 }
