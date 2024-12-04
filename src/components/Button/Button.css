@@ -1,3 +1,7 @@
+button {
+  margin-right: 16px;
+}
+
 .primary {
   background-color: #6c1bdb;
   padding: 16px 32px;

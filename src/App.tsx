@@ -10,6 +10,9 @@ import SelectedPost from "./components/SelectedPost/SelectedPost";
 import Footer from "./components/Footer/Footer";
 import SelectedPage from "./pages/SelectedPage/SelectedPage";
 import Spinner from "./components/Spinner/Spinner";
+import Card from "./components/Card/Card";
+import PostsList from "./components/PostsList/PostsList";
+import AllPostsPage from "./pages/AllPostsPage/AllPostsPage";
 
 function App() {
   function handleClick1() {
@@ -40,8 +43,12 @@ function App() {
       {/* <Dropdown fullname="Artem Malkin"></Dropdown> */}
       {/* <SelectedPost></SelectedPost> */}
       {/* <Footer></Footer> */}
-      <SelectedPage></SelectedPage>
+
       {/* <Spinner></Spinner> */}
+      {/* <Card></Card> */}
+      {/* <PostsList></PostsList> */}
+      <AllPostsPage></AllPostsPage>
+      <SelectedPage></SelectedPage>
     </>
   );
 }
