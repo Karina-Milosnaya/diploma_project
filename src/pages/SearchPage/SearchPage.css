@@ -1,0 +1,11 @@
+.search-page {
+  padding: 72px 0 72px 0;
+}
+
+.search-page-light {
+  background-color: #f3f3f3;
+}
+
+.search-page-dark {
+  background-color: #313037;
+}

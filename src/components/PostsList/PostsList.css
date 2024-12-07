@@ -1,3 +1,6 @@
+.posts-list {
+  margin-top: 64px;
+}
 .posts-list__wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

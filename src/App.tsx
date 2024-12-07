@@ -14,6 +14,7 @@ import Card from "./components/Card/Card";
 import PostsList from "./components/PostsList/PostsList";
 import AllPostsPage from "./pages/AllPostsPage/AllPostsPage";
 import ThemeContext from "./providers/ThemeContext";
+import SearchPage from "./pages/SearchPage/SearchPage";
 
 function App() {
   function handleClick1() {
@@ -49,8 +50,9 @@ function App() {
       {/* <Card></Card> */}
       {/* <PostsList></PostsList> */}
       <ThemeContext>
-        <AllPostsPage></AllPostsPage>
-        <SelectedPage></SelectedPage>
+        {/* <AllPostsPage></AllPostsPage> */}
+        {/* <SelectedPage></SelectedPage> */}
+        <SearchPage></SearchPage>
       </ThemeContext>
     </>
   );
