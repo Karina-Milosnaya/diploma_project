@@ -2,6 +2,7 @@ import "./Header.css";
 import Logo from "../../assets/Logo.png";
 import { useState, useContext } from "react";
 import { contextCreation } from "../../providers/ThemeContext";
+import { Link, useNavigate } from "react-router-dom";
 
 type TUserName = {
   fullname: string;
@@ -9,6 +10,11 @@ type TUserName = {
 
 function Header({ fullname }: TUserName) {
   const [color, setColor] = useContext(contextCreation);
+  const nav = useNavigate();
+
+  function handleSearch() {
+    nav("/search");
+  }
 
   function getInitials(name: string): string {
     let array = name.split(" ");
@@ -21,9 +27,9 @@ function Header({ fullname }: TUserName) {
     <>
       <header className={`header header-${color}`}>
         <div className="header-wrap">
-          <div className="header__logo">
+          <Link to={"/"} className="header__logo">
             <img src={Logo} alt="logo" />
-          </div>
+          </Link>
 
           <div className="header__left_search">
             <input
@@ -37,7 +43,7 @@ function Header({ fullname }: TUserName) {
           </div>
 
           <div className="header__right">
-            <div className="header__right_item-left">
+            <div onClick={handleSearch} className="header__right_item-left">
               <i
                 className={`fa-solid fa-magnifying-glass fa-magnifying-glass-${color}`}
               ></i>

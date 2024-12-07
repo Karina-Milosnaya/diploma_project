@@ -15,6 +15,7 @@ import PostsList from "./components/PostsList/PostsList";
 import AllPostsPage from "./pages/AllPostsPage/AllPostsPage";
 import ThemeContext from "./providers/ThemeContext";
 import SearchPage from "./pages/SearchPage/SearchPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   function handleClick1() {
@@ -49,11 +50,16 @@ function App() {
       {/* <Spinner></Spinner> */}
       {/* <Card></Card> */}
       {/* <PostsList></PostsList> */}
-      <ThemeContext>
-        {/* <AllPostsPage></AllPostsPage> */}
-        {/* <SelectedPage></SelectedPage> */}
-        <SearchPage></SearchPage>
-      </ThemeContext>
+      <BrowserRouter>
+        <ThemeContext>
+          <Header fullname="Artem Malkin"></Header>
+          <Routes>
+            <Route path="/" element={<AllPostsPage></AllPostsPage>}></Route>
+            <Route path="/:id" element={<SelectedPage></SelectedPage>}></Route>
+            <Route path="/search" element={<SearchPage></SearchPage>}></Route>
+          </Routes>
+        </ThemeContext>
+      </BrowserRouter>
     </>
   );
 }

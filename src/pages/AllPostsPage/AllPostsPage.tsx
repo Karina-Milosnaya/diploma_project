@@ -24,8 +24,6 @@ function AllPostsPage() {
 
   return (
     <>
-      <Header fullname="Artem Malkin"></Header>
-
       <section className={`all-posts-main all-posts-main-${color}`}>
         <div className="container">
           <Title titleContent="Blog"></Title>

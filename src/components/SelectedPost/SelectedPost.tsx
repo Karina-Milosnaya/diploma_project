@@ -3,6 +3,7 @@ import "./SelectedPost.css";
 import Group1459 from "../../assets/Group1459.png";
 import { useEffect, useState, useContext } from "react";
 import { contextCreation } from "../../providers/ThemeContext";
+import { Link } from "react-router-dom";
 
 type TPost = {
   id: number;
@@ -30,9 +31,12 @@ function SelectedPost({ post }: { post: TPost }) {
       <section className={`selected-post selected-post-${color}`}>
         <div className="container">
           <div className="selected-post__wrap">
-            <div className={`selected-post__nav selected-post__nav-${color}`}>
+            <Link
+              to={"/"}
+              className={`selected-post__nav selected-post__nav-${color}`}
+            >
               Home | <a href="#">{`Post ${post.id}`}</a>
-            </div>
+            </Link>
             <Title titleContent={post.title}></Title>
             <div className="selected-post__img">
               <img src={post.image_url} alt="image" />

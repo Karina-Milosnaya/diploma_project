@@ -18,8 +18,6 @@ function SearchPage() {
   }, []);
   return (
     <>
-      <Header fullname="Artem Malkin"></Header>
-
       <section className={`search-page search-page-${color}`}>
         <div className="container">
           <Title titleContent="Search results ‘Astronauts’"></Title>
