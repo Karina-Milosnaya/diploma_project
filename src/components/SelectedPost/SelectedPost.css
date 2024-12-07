@@ -1,6 +1,13 @@
 .selected-post {
-  background-color: rgba(49, 48, 55, 0.05);
   padding: 72px 0;
+}
+
+.selected-post-light {
+  background-color: #f3f3f3;
+}
+
+.selected-post-dark {
+  background-color: #313037;
 }
 
 .selected-post__wrap {
@@ -15,8 +22,20 @@
   margin-bottom: 32px;
 }
 
-.selected-post__nav a {
+.selected-post__nav-light {
+  color: #313037;
+}
+
+.selected-post__nav-dark {
+  color: #fff;
+}
+
+.selected-post__nav-light a {
   color: rgba(49, 48, 55, 0.5);
+}
+
+.selected-post__nav-dark a {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .selected-post__img {
@@ -41,8 +60,14 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
-  color: #313037;
   margin-bottom: 48px;
+}
+
+.selected-post__description-light p {
+  color: #313037;
+}
+.selected-post__description-dark p {
+  color: #fff;
 }
 
 .selected-post__reactions {
@@ -52,16 +77,31 @@
 }
 
 .selected-post__reactions_item {
-  background-color: rgba(49, 48, 55, 0.1);
   border-radius: 4px;
   padding: 16px 32px;
   margin-right: 6px;
 }
+
+.selected-post__reactions_item-light {
+  background-color: rgba(49, 48, 55, 0.1);
+}
+
+.selected-post__reactions_item-dark {
+  background-color: #4c4a56;
+}
+
 .selected-post__reactions_item:last-child {
   margin-right: 0;
 }
 
 .reactions-icon {
   font-size: 24px;
+}
+
+.reactions-icon-light {
   color: #313037;
+}
+
+.reactions-icon-dark {
+  color: #fff;
 }

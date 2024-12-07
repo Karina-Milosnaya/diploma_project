@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -6,9 +6,12 @@ import PostsList from "../../components/PostsList/PostsList";
 import Title from "../../components/Title/Title";
 import "./AllPostsPage.css";
 import Spinner from "../../components/Spinner/Spinner";
+import { contextCreation } from "../../providers/ThemeContext";
 
 function AllPostsPage() {
   const [posts, setPosts] = useState([]);
+  const [color, setColor] = useContext(contextCreation);
+
   useEffect(() => {
     fetch("https://api.spaceflightnewsapi.net/v4/articles/?limit=12")
       .then((response) => response.json())
@@ -23,7 +26,7 @@ function AllPostsPage() {
     <>
       <Header fullname="Artem Malkin"></Header>
 
-      <section className="all-posts-main">
+      <section className={`all-posts-main all-posts-main-${color}`}>
         <div className="container">
           <Title titleContent="Blog"></Title>
           <div className="buttons">

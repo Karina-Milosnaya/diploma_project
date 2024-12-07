@@ -1,6 +1,11 @@
 .all-posts-main {
   padding: 72px 0;
+}
+.all-posts-main-light {
   background-color: #f3f3f3;
+}
+.all-posts-main-dark {
+  background-color: #313037;
 }
 
 .buttons {

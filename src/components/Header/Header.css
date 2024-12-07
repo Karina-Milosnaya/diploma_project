@@ -1,5 +1,8 @@
-.header {
+.header-light {
   background-color: #ffffff;
+}
+.header-dark {
+  background-color: #4c4a56;
 }
 
 .header-wrap {
@@ -54,6 +57,14 @@
   color: #313037;
 }
 
+.fa-magnifying-glass-light {
+  color: #313037;
+}
+
+.fa-magnifying-glass-dark {
+  color: #fff;
+}
+
 .header__right_item-initials {
   width: 48px;
   height: 48px;
@@ -65,15 +76,24 @@
   text-align: center;
   padding: 7px 11px 7px 10px;
   margin-right: 16px;
+  border-radius: 4px;
 }
 
 .header__right_item-fullname {
   display: flex;
   justify-content: space-between;
   width: 104px;
-  color: #313037;
+
   font-size: 16px;
   font-weight: 600;
   line-height: 34px;
   text-align: center;
+}
+
+.header__right_item-fullname-light {
+  color: #313037;
+}
+
+.header__right_item-fullname-dark {
+  color: #fff;
 }

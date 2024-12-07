@@ -13,6 +13,7 @@ import Spinner from "./components/Spinner/Spinner";
 import Card from "./components/Card/Card";
 import PostsList from "./components/PostsList/PostsList";
 import AllPostsPage from "./pages/AllPostsPage/AllPostsPage";
+import ThemeContext from "./providers/ThemeContext";
 
 function App() {
   function handleClick1() {
@@ -47,8 +48,10 @@ function App() {
       {/* <Spinner></Spinner> */}
       {/* <Card></Card> */}
       {/* <PostsList></PostsList> */}
-      <AllPostsPage></AllPostsPage>
-      <SelectedPage></SelectedPage>
+      <ThemeContext>
+        <AllPostsPage></AllPostsPage>
+        <SelectedPage></SelectedPage>
+      </ThemeContext>
     </>
   );
 }

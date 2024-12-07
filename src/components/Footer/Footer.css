@@ -1,6 +1,13 @@
 .footer {
   padding: 34px 0;
+}
+
+.footer-light {
   background-color: #f3f3f3;
+}
+
+.footer-dark {
+  background-color: #313037;
 }
 
 .footer-wrap {
@@ -11,8 +18,15 @@
 .footer__copyright span {
   font-size: 16px;
   font-weight: 400;
-  color: rgba(49, 48, 55, 0.5);
+
   line-height: 24px;
+}
+.footer__copyright-light span {
+  color: rgba(49, 48, 55, 0.5);
+}
+
+.footer__copyright-dark span {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .footer__theme-switcher {
@@ -24,13 +38,27 @@
 .footer__theme-switcher_name {
   font-size: 16px;
   font-weight: 400;
-  color: rgba(49, 48, 55, 0.5);
+
   line-height: 24px;
+}
+
+.footer__theme-switcher_name-light {
+  color: rgba(49, 48, 55, 0.5);
+}
+.footer__theme-switcher_name-dark {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .switcher-icon {
   font-size: 23px;
   font-weight: 400;
-  color: rgba(49, 48, 55, 0.5);
   line-height: 24px;
+}
+
+.switcher-icon-light {
+  color: rgba(49, 48, 55, 0.5);
+}
+
+.switcher-icon-dark {
+  color: #6c1bdb;
 }

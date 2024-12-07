@@ -18,9 +18,15 @@ html {
 }
 
 .main-title {
-  color: #313037;
   font-size: 56px;
   font-weight: 700;
   text-align: left;
   line-height: 80px;
+}
+
+.main-title-light {
+  color: #313037;
+}
+.main-title-dark {
+  color: #fff;
 }

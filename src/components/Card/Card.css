@@ -5,6 +5,14 @@
   cursor: pointer;
 }
 
+.card-light {
+  background-color: #fff;
+}
+
+.card-dark {
+  background-color: #4c4a56;
+}
+
 /* .card::after {
   content: "";
   display: inline-block;
@@ -65,9 +73,24 @@
   margin-bottom: 8px;
 }
 
+.card__date-light {
+  color: rgba(49, 48, 55, 0.5);
+}
+.card__date-dark {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .card__title {
   font-size: 18px;
   font-weight: 600;
   line-height: 28px;
   color: #313037;
+}
+
+.card__title-light {
+  color: #313037;
+}
+
+.card__title-dark {
+  color: #fff;
 }

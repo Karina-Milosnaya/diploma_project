@@ -1,12 +1,15 @@
 import "./Header.css";
 import Logo from "../../assets/Logo.png";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { contextCreation } from "../../providers/ThemeContext";
 
 type TUserName = {
   fullname: string;
 };
 
 function Header({ fullname }: TUserName) {
+  const [color, setColor] = useContext(contextCreation);
+
   function getInitials(name: string): string {
     let array = name.split(" ");
     return array.reduce((result, item) => {
@@ -16,7 +19,7 @@ function Header({ fullname }: TUserName) {
 
   return (
     <>
-      <header className="header">
+      <header className={`header header-${color}`}>
         <div className="header-wrap">
           <div className="header__logo">
             <img src={Logo} alt="logo" />
@@ -35,13 +38,19 @@ function Header({ fullname }: TUserName) {
 
           <div className="header__right">
             <div className="header__right_item-left">
-              <i className="fa-solid fa-magnifying-glass"></i>
+              <i
+                className={`fa-solid fa-magnifying-glass fa-magnifying-glass-${color}`}
+              ></i>
             </div>
             <div className="header__right_item-right">
               <div className="header__right_item-initials">
                 {getInitials(fullname)}
               </div>
-              <div className="header__right_item-fullname">{fullname}</div>
+              <div
+                className={`header__right_item-fullname header__right_item-fullname-${color}`}
+              >
+                {fullname}
+              </div>
             </div>
           </div>
         </div>
