@@ -17,6 +17,9 @@ import ThemeContext from "./providers/ThemeContext";
 import SearchPage from "./pages/SearchPage/SearchPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import { Provider } from "react-redux";
+import store from "./store/store";
+
 function App() {
   function handleClick1() {
     alert("hi");
@@ -52,12 +55,17 @@ function App() {
       {/* <PostsList></PostsList> */}
       <BrowserRouter>
         <ThemeContext>
-          <Header fullname="Artem Malkin"></Header>
-          <Routes>
-            <Route path="/" element={<AllPostsPage></AllPostsPage>}></Route>
-            <Route path="/:id" element={<SelectedPage></SelectedPage>}></Route>
-            <Route path="/search" element={<SearchPage></SearchPage>}></Route>
-          </Routes>
+          <Provider store={store}>
+            <Header fullname="Artem Malkin"></Header>
+            <Routes>
+              <Route path="/" element={<AllPostsPage></AllPostsPage>}></Route>
+              <Route
+                path="/:id"
+                element={<SelectedPage></SelectedPage>}
+              ></Route>
+              <Route path="/search" element={<SearchPage></SearchPage>}></Route>
+            </Routes>
+          </Provider>
         </ThemeContext>
       </BrowserRouter>
     </>
