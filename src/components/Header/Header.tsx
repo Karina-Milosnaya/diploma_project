@@ -10,9 +10,11 @@ type TUserName = {
 
 function Header({ fullname }: TUserName) {
   const [color, setColor] = useContext(contextCreation);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const nav = useNavigate();
 
   function handleSearch() {
+    setIsSearchOpen(!isSearchOpen);
     nav("/search");
   }
 
@@ -31,16 +33,18 @@ function Header({ fullname }: TUserName) {
             <img src={Logo} alt="logo" />
           </Link>
 
-          <div className="header__left_search">
-            <input
-              placeholder="Search..."
-              type="text"
-              className="header__left_search-input"
-            ></input>
-            <div className="header__left_search-icon">
+          {isSearchOpen ? (
+            <div className="header__left_search">
+              <input
+                placeholder="Search..."
+                type="text"
+                className="header__left_search-input"
+              ></input>
+              {/* <div className="header__left_search-icon">
               <i className="fa-solid fa-xmark"></i>
+            </div> */}
             </div>
-          </div>
+          ) : null}
 
           <div className="header__right">
             <div onClick={handleSearch} className="header__right_item-left">

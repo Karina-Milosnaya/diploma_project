@@ -7,15 +7,21 @@ import Title from "../../components/Title/Title";
 import "./AllPostsPage.css";
 import Spinner from "../../components/Spinner/Spinner";
 import { contextCreation } from "../../providers/ThemeContext";
+import { useDispatch, useSelector } from "react-redux";
+import { getPosts } from "../../slice/blog";
 
 function AllPostsPage() {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
   const [color, setColor] = useContext(contextCreation);
 
+  const data = useSelector((state: any) => state.blog);
+  const dispatch = useDispatch<any>();
+
   useEffect(() => {
-    fetch("https://api.spaceflightnewsapi.net/v4/articles/?limit=12")
-      .then((response) => response.json())
-      .then((json) => setPosts(json.results));
+    // fetch("https://api.spaceflightnewsapi.net/v4/articles/?limit=12")
+    //   .then((response) => response.json())
+    //   .then((json) => setPosts(json.results));
+    dispatch(getPosts());
   }, []);
 
   function handleClick1() {
@@ -55,10 +61,10 @@ function AllPostsPage() {
               ></Button>
             </div>
           </div>
-          {posts.length == 0 ? (
+          {data.posts.length == 0 ? (
             <Spinner></Spinner>
           ) : (
-            <PostsList posts={posts}></PostsList>
+            <PostsList posts={data.posts}></PostsList>
           )}
         </div>
       </section>

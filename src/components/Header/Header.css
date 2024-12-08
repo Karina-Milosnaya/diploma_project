@@ -41,7 +41,7 @@
 }
 
 .header__right_item-left {
-  padding-right: 32px;
+  padding: 0 32px;
   border-right: 0.5px solid #f3f3f3;
   cursor: pointer;
 }

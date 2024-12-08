@@ -5,23 +5,29 @@ import SelectedPost from "../../components/SelectedPost/SelectedPost";
 import "./SelectedPage.css";
 import Spinner from "../../components/Spinner/Spinner";
 import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getOnePost } from "../../slice/blog";
 
 function SelectedPage() {
-  const [post, setPost] = useState(null);
+  // const [post, setPost] = useState(null);
   const { id } = useParams();
 
+  const data = useSelector((state: any) => state.blog);
+  const dispatch = useDispatch<any>();
+
   useEffect(() => {
-    fetch(`https://api.spaceflightnewsapi.net/v4/articles/${id}/`)
-      .then((response) => response.json())
-      .then((json) => setPost(json));
+    // fetch(`https://api.spaceflightnewsapi.net/v4/articles/${id}/`)
+    //   .then((response) => response.json())
+    //   .then((json) => setPost(json));
+    dispatch(getOnePost(id));
   }, []);
 
   return (
     <>
-      {post === null ? (
+      {data.post === null ? (
         <Spinner></Spinner>
       ) : (
-        <SelectedPost post={post}></SelectedPost>
+        <SelectedPost post={data.post}></SelectedPost>
       )}
       <Footer></Footer>
     </>

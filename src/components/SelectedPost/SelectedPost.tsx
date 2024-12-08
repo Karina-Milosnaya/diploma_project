@@ -4,6 +4,7 @@ import Group1459 from "../../assets/Group1459.png";
 import { useEffect, useState, useContext } from "react";
 import { contextCreation } from "../../providers/ThemeContext";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 type TPost = {
   id: number;
@@ -26,6 +27,11 @@ type TPost = {
 
 function SelectedPost({ post }: { post: TPost }) {
   const [color, setColor] = useContext(contextCreation);
+
+  // const dispatch = useDispatch();
+  // const data = useSelector((state: any) => state.blog);
+  // console.log(data);
+
   return (
     <>
       <section className={`selected-post selected-post-${color}`}>
