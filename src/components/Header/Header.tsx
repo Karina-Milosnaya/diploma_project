@@ -5,10 +5,7 @@ import { contextCreation } from "../../providers/ThemeContext";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { searchPost } from "../../slice/blog";
-
-type TUserName = {
-  fullname: string;
-};
+import { TUserName } from "../types/types";
 
 function Header({ fullname }: TUserName) {
   const [color, setColor] = useContext(contextCreation);
@@ -17,7 +14,6 @@ function Header({ fullname }: TUserName) {
   const nav = useNavigate();
   const dispatch = useDispatch<any>();
   // const data = useSelector((item: any) => item.blog.search);
-
   // console.log(data.results);
 
   function handleSearch() {

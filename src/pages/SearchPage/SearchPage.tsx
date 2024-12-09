@@ -11,31 +11,26 @@ import { getPosts, searchPost } from "../../slice/blog";
 import SearchList from "../../components/SearchList/SearchList";
 
 function SearchPage() {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
   const [color, setColor] = useContext(contextCreation);
   const data = useSelector((state: any) => state.blog);
   const dispatch = useDispatch<any>();
-  // console.log(data);
 
-  // const data = useSelector((data: any) => data.blog);
-  // console.log(data);
+  console.log(data);
 
-  useEffect(() => {
-    // fetch("https://api.spaceflightnewsapi.net/v4/articles/?limit=12")
-    //   .then((response) => response.json())
-    //   .then((json) => setPosts(json.results));
+  // useEffect(() => {
+  //   dispatch(searchPost("a"));
+  // }, []);
 
-    dispatch(searchPost("a"));
-  }, []);
   return (
     <>
       <section className={`search-page search-page-${color}`}>
         <div className="container">
-          <Title titleContent={`Search results ‘${""}’`}></Title>
-          {data.search.length !== 0 ? (
-            <div>Нет данных для отображения</div>
+          <Title titleContent={`Search results`}></Title>
+          {data.search.length !== 0 && data.search.results.length !== 0 ? (
+            <SearchList posts={data.search.results}></SearchList>
           ) : (
-            <SearchList posts={data.search}></SearchList>
+            <div>Нет данных для отображения</div>
           )}
         </div>
       </section>

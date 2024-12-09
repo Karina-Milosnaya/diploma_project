@@ -2,29 +2,7 @@ import "./SearchCard.css";
 import { useContext } from "react";
 import { contextCreation } from "../../providers/ThemeContext";
 import { Link } from "react-router-dom";
-
-type TPost = {
-  id: number;
-  title: string;
-  url: string;
-  image_url: string;
-  news_site: string;
-  summary: string;
-  published_at: string;
-  updated_at: string;
-  featured: boolean;
-  launches: [
-    {
-      launch_id: string;
-      provider: string;
-    }
-  ];
-  events: [];
-};
-
-type TPostt = {
-  post: TPost;
-};
+import { TPost, TPostt } from "../types/types";
 
 function SearchCard({ post }: TPostt) {
   const [color, setColor] = useContext(contextCreation);

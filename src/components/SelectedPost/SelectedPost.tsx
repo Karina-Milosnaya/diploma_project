@@ -5,25 +5,7 @@ import { useEffect, useState, useContext } from "react";
 import { contextCreation } from "../../providers/ThemeContext";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
-type TPost = {
-  id: number;
-  title: string;
-  url: string;
-  image_url: string;
-  news_site: string;
-  summary: string;
-  published_at: string;
-  updated_at: string;
-  featured: boolean;
-  launches: [
-    {
-      launch_id: string;
-      provider: string;
-    }
-  ];
-  events: [];
-};
+import { TPost } from "../types/types";
 
 function SelectedPost({ post }: { post: TPost }) {
   const [color, setColor] = useContext(contextCreation);

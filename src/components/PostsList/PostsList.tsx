@@ -2,25 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import "./PostsList.css";
 import { Link } from "react-router-dom";
-
-type TPost = {
-  id: number;
-  title: string;
-  url: string;
-  image_url: string;
-  news_site: string;
-  summary: string;
-  published_at: string;
-  updated_at: string;
-  featured: boolean;
-  launches: [
-    {
-      launch_id: string;
-      provider: string;
-    }
-  ];
-  events: [];
-};
+import { TPost } from "../types/types";
 
 function PostsList({ posts }: { posts: TPost[] }) {
   return (

@@ -1,9 +1,5 @@
 import "./Tab.css";
-
-type TTab = {
-  tabContent: string;
-  isDisabled: boolean;
-};
+import { TTab } from "../types/types";
 
 function Tab({ tabContent, isDisabled }: TTab) {
   return (

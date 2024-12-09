@@ -1,11 +1,5 @@
 import "./Button.css";
-
-type TButton = {
-  buttonText: string;
-  isDisabled: boolean;
-  typeButton: string;
-  functionClick: () => void;
-};
+import { TButton } from "../types/types";
 
 function Button({
   buttonText,

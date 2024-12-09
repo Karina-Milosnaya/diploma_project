@@ -1,12 +1,7 @@
 import { useContext } from "react";
 import { contextCreation } from "../../providers/ThemeContext";
 import "./Card.css";
-
-type TCard = {
-  cardImage: string;
-  cardDate: string;
-  cardTitle: string;
-};
+import { TCard } from "../types/types";
 
 function Card({ cardImage, cardDate, cardTitle }: TCard) {
   const [color, setColor] = useContext(contextCreation);

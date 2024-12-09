@@ -39,7 +39,7 @@ export const getOnePost = createAsyncThunk(
 
 export const searchPost = createAsyncThunk(
   "blog/searchPost",
-  async function (search: string | undefined, { rejectWithValue }) {
+  async function (search: any, { rejectWithValue }) {
     try {
       const response = await fetch(
         `https://api.spaceflightnewsapi.net/v4/articles/?limit=12&search=${search}`
