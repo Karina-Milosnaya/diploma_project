@@ -37,6 +37,24 @@ export const getOnePost = createAsyncThunk(
   }
 );
 
+export const searchPost = createAsyncThunk(
+  "blog/searchPost",
+  async function (search: string | undefined, { rejectWithValue }) {
+    try {
+      const response = await fetch(
+        `https://api.spaceflightnewsapi.net/v4/articles/?limit=12&search=${search}`
+      );
+      if (!response.ok) {
+        throw new Error("Не удалось загрузить данные");
+      }
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      return rejectWithValue((error as Error).message);
+    }
+  }
+);
+
 const blogSlice = createSlice({
   name: "blog",
   initialState: {
@@ -44,6 +62,7 @@ const blogSlice = createSlice({
     error: null,
     status: null,
     post: null,
+    search: [],
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -83,6 +102,27 @@ const blogSlice = createSlice({
       ),
       builder.addCase(
         getOnePost.rejected,
+        (state: any, { payload }: { payload: any }) => {
+          state.status = "rejected";
+          state.error = payload;
+          // state.posts = [];
+        }
+      ),
+      builder.addCase(searchPost.pending, (state: any) => {
+        // state.post = null;
+        state.status = "loading";
+        state.error = null;
+      }),
+      builder.addCase(
+        searchPost.fulfilled,
+        (state: any, { payload }: { payload: any }) => {
+          state.status = "resolved";
+          state.error = null;
+          state.search = payload;
+        }
+      ),
+      builder.addCase(
+        searchPost.rejected,
         (state: any, { payload }: { payload: any }) => {
           state.status = "rejected";
           state.error = payload;

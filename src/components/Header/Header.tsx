@@ -3,6 +3,8 @@ import Logo from "../../assets/Logo.png";
 import { useState, useContext } from "react";
 import { contextCreation } from "../../providers/ThemeContext";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { searchPost } from "../../slice/blog";
 
 type TUserName = {
   fullname: string;
@@ -10,8 +12,13 @@ type TUserName = {
 
 function Header({ fullname }: TUserName) {
   const [color, setColor] = useContext(contextCreation);
+  const [inputText, setInputText] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const nav = useNavigate();
+  const dispatch = useDispatch<any>();
+  // const data = useSelector((item: any) => item.blog.search);
+
+  // console.log(data.results);
 
   function handleSearch() {
     setIsSearchOpen(!isSearchOpen);
@@ -25,6 +32,10 @@ function Header({ fullname }: TUserName) {
     }, "");
   }
 
+  function aaaa(value: string) {
+    dispatch(searchPost(value));
+  }
+
   return (
     <>
       <header className={`header header-${color}`}>
@@ -36,6 +47,11 @@ function Header({ fullname }: TUserName) {
           {isSearchOpen ? (
             <div className="header__left_search">
               <input
+                value={inputText}
+                onChange={(event) => {
+                  setInputText(event.target.value);
+                  aaaa(event.target.value);
+                }}
                 placeholder="Search..."
                 type="text"
                 className="header__left_search-input"
